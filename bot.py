@@ -17,7 +17,7 @@ def setup_google_sheets():
     try:
         scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
         credentials = ServiceAccountCredentials.from_json_keyfile_name(
-            "/opt/render/secrets/credentials.json", scope
+           "/etc/secrets/credentials.json", scope
         )
         client = gspread.authorize(credentials)
         sheet = client.open_by_key("1tA19pOdq2fS6eAREimyD4YEH3m5TCvOb4WqlUCN-2FM")
